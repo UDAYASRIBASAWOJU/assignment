@@ -1,0 +1,56 @@
+1:19:53 Tab13 FinishNav53
+1:19:53 Tab13 PageLoad
+1:22:22 Tab13 StartNav54 #typed
+1:22:22 Tab13 FinishNav54
+1:22:22 Tab13 PageLoad
+1:33:31 Tab13 StartNav55 #typed
+1:33:31 Tab13 FinishNav55 ERR_ABORTED
+1:33:31 Tab13 StartNav56 #typed
+1:33:31 Tab13 FinishNav56
+1:33:31 Tab13 PageLoad
+1:33:32 Microsoft.NewBrowser_Popup
+1:33:32 Microsoft.BrowserList.AddBrowser
+1:33:32 Browser22 Insert active Tab22 at 0
+1:33:32 Tab22 StartNav57 #auto_toplevel
+1:33:32 Tab22 StartNav58 #typed
+1:33:32 Tab22 FinishNav58 ERR_ABORTED
+1:33:32 Tab22 StartNav59 #typed
+1:33:32 Tab22 FinishNav57
+1:33:32 Tab22 PageLoad
+1:33:32 Tab22 FinishNav59
+1:33:32 Tab22 PageLoad
+1:33:32 Tab13 StartNav60 #typed
+1:33:32 Tab13 FinishNav60
+1:33:32 Tab13 PageLoad
+1:33:33 Tab22 StartNav61 #typed
+1:33:33 Tab22 FinishNav61
+1:33:33 Tab22 PageLoad
+1:33:33 Tab22 StartNav62 #typed
+1:33:33 Tab22 FinishNav62
+1:33:33 Tab22 PageLoad
+1:33:41 Tab13 StartNav63 #typed
+1:33:41 Tab13 FinishNav63 ERR_ABORTED
+1:33:41 Tab13 StartNav64 #typed
+1:33:41 Tab13 FinishNav64
+1:33:41 Tab13 PageLoad
+1:33:43 Tab13 StartNav65 #typed
+1:33:43 Tab13 FinishNav65
+1:33:43 Tab13 PageLoad
+1:34:02 Microsoft.NewBrowser_Popup
+1:34:02 Microsoft.BrowserList.AddBrowser
+1:34:02 Browser23 Insert active Tab23 at 0
+1:34:02 Tab23 StartNav66 #auto_toplevel
+1:34:02 Tab23 StartNav67 #typed
+1:34:02 Tab23 FinishNav67 ERR_ABORTED
+1:34:02 Tab23 StartNav68 #typed
+1:34:02 Tab23 FinishNav66
+1:34:02 Tab23 PageLoad
+1:34:02 Tab23 FinishNav68
+1:34:02 Tab23 PageLoad
+1:34:05 Tab23 StartNav69 #typed
+1:34:05 Tab23 FinishNav69
+1:34:05 Tab23 PageLoad
+1:34:06 Tab23 StartNav70 #typed
+1:34:06 Tab23 FinishNav70
+1:34:06 Tab23 PageLoad
+1:41:27 Microsoft.UnloadController.IsUnclosableApp_IsNotWebApp
