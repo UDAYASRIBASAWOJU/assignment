@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\udaya\OneDrive - Lovely Professional University\Desktop\assignment\Advance_Java\eCommerce_project_mvc"/>
+			<item value="C:\Users\udaya\OneDrive - Lovely Professional University\Desktop\assignment\Advance_Java\demo_project"/>
+			<item value="C:\Users\udaya\OneDrive - Lovely Professional University\Desktop\assignment\Advance_Java\cache_project"/>
+			<item value="C:\Users\udaya\OneDrive - Lovely Professional University\Desktop\assignment\Advance_Java\bidirectional_project"/>
+			<item value="C:\Users\udaya\OneDrive - Lovely Professional University\Desktop\assignment\Advance_Java\bean_lifecycle"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>
