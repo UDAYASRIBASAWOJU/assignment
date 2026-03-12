@@ -1,0 +1,31 @@
+spring.application.name=products
+spring.datasource.url= jdbc:postgresql://localhost:5432/products
+#spring.datasource.username=postgres
+#spring.datasource.password=root
+#
+#spring.jpa.hibernate.ddl-auto=update
+#spring.jpa.properties.hibernate.format_sql=true
+#spring.jpa.show-sql=true
+#
+#spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
+
+server.port = 8082
+
+spring.config.import=optional:configserver:http://localhost:9999/config
+
+#eureka.client.serviceUrl.defaultZone=http://localhost:8761/registery/eureka
+
+
+# Number of requests monitored
+resilience4j.circuitbreaker.instances.demoService.failure-rate-threshold=50
+
+# Minimum requests required before calculating failure rate
+resilience4j.circuitbreaker.instances.demoService.sliding-window-size=6
+
+# Time circuit stays open
+resilience4j.circuitbreaker.instances.demoService.minimum-number-of-calls=6
+
+# Test calls allowed in HALF OPEN
+resilience4j.circuitbreaker.instances.demoService.wait-duration-in-open-state=10s
+
+resilience4j.circuitbreaker.instances.demoService.permitted-number-of-calls-in-half-open-state=2

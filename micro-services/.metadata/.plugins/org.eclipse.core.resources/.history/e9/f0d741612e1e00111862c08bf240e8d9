@@ -1,0 +1,56 @@
+package com.lpu.users.controller;
+
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.timelimiter.annotation.TimeLimiter;
+
+import java.util.concurrent.CompletableFuture;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TestController {
+
+    int count = 0;
+
+    @GetMapping("/test")
+    @CircuitBreaker(name = "userServiceCB", fallbackMethod = "fallBack")
+    @TimeLimiter(name = "userServiceCB", fallbackMethod = "fallBack")
+    public CompletableFuture<String> testService() {
+
+        return CompletableFuture.supplyAsync(() -> {
+            count++;
+            System.out.println("Service called " + count);
+
+            try {
+                // Simulate slow response
+                Thread.sleep(10000); // 10 seconds
+            } catch (InterruptedException e) {
+                throw new IllegalStateException(e);
+            }
+
+            // Successful first 3 requests
+            if (count <= 3) {
+                return "Service response " + count;
+            }
+
+            if (count == 15) {
+                count = 0;
+            }
+
+            // Simulate failure
+            throw new RuntimeException("Service failed " + count);
+        });
+    }
+
+    // Fallback method
+    public CompletableFuture<String> fallBack(Exception ex) {
+    	System.out.println("Fallback executed: " + ex.getMessage());
+
+        if (ex instanceof java.util.concurrent.TimeoutException) {
+            return CompletableFuture.completedFuture("Fallback: Taking too much time, please try later!");
+        } else {
+            return CompletableFuture.completedFuture("Fallback: Circuit Breaker active due to error!");
+        }
+    }
+}

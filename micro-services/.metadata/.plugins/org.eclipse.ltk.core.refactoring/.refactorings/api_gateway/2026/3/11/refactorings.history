@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.lpu.products&apos; to &apos;com.lpu.api_gateway&apos;&#x0D;&#x0A;- Original project: &apos;api_gateway&apos;&#x0D;&#x0A;- Original element: &apos;api_gateway/src/main/java/com.lpu.products&apos;&#x0D;&#x0A;- Renamed element: &apos;api_gateway/src/main/java/com.lpu.api_gateway&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.lpu.products&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.lpu.products" name="com.lpu.api_gateway" qualified="false" references="true" stamp="1773320165720" textual="false" version="1.0"/>
+</session>

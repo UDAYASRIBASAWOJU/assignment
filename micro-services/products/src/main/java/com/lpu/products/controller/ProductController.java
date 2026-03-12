@@ -15,12 +15,39 @@ import org.springframework.web.bind.annotation.RestController;
 import com.lpu.products.entity.Product;
 import com.lpu.products.service.ProductService;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+
 @RequestMapping("/product")
 @RestController
 public class ProductController {
 
 	@Autowired
 	private ProductService service;
+	
+	int count = 0;
+	
+	@GetMapping("/test")
+	@CircuitBreaker(name = "demoService", fallbackMethod = "fallBack")
+	public String testService() {
+		count++;
+		System.out.println("Service called " + count);
+		
+		if(count <= 3) {
+			return "Request sucessful " + count;
+		}
+		
+		if(count == 15) {
+			count = 0;
+		}
+		
+		throw new RuntimeException("Service failed " + count);
+	}
+	
+	public String fallBack(Exception ex) {
+		System.out.println("Fallback executed");
+		
+		return "Fallback response - Circuit Breaker active";
+	}
 	
 	@GetMapping("/get-product")
 	public String getProduct() {
